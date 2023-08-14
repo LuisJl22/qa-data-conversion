@@ -33,15 +33,14 @@ public class Data {
         double downloadTime = calculateDownloadTime();
         int minutes = (int) Math.floor(downloadTime / 60);
         int seconds = (int) Math.round(downloadTime % 60);
-
-        return minutes + " minutes and " + seconds + " seconds";
+        //removed the and from after minutes
+        return minutes + " minutes " + seconds + " seconds";
 
     }
     @Override
     public String toString() {
-        return "Amount: " + amount + " " + unit +
-                "\nDownload Speed: " + speed + " Mbps\n"
-                + "Download Time: " + getFormattedDownloadTime();
+        // fixed the format of the string to match test output
+        return "Data: " + amount + " " + unit + "\nDownload Time: " + getFormattedDownloadTime();
     }
 
 
